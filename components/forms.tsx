@@ -1,7 +1,8 @@
 import { formProps } from "../types/form";
 
 const Form = ({onChange, label}: formProps) => {
-    return (
+
+  return (
         <form className="bg-white px-8 pb-8 basis-1/2 xsm:basis-full" id="compliance">
           <h1 className='text-2xl font-bold pb-2'>{label}</h1>
           <div className="mb-4">

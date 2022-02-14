@@ -5,11 +5,7 @@ import Result from '../components/result';
 import dayjs from "dayjs";
 import Github from '../components/github';
 
-export const Home = ({data}) => {
-
-  // To reset the Form
-  var FormID = 'compliance';
-  let resetForm: HTMLFormElement = document.querySelector(FormID);
+export const Home = ({ data }) => {
 
   // Get results from API
   const [results, setResults] = useState(data);
@@ -23,45 +19,43 @@ export const Home = ({data}) => {
     let resultType = nameArr[0].toLowerCase();
     let resultMacro = nameArr[1].toLowerCase();
 
-    data[resultMacro][resultType] = e.target.value? e.target.value: 0;
+    data[resultMacro][resultType] = e.target.value? parseInt(e.target.value) : 0;
 
     setResults(data);
   }
 
   // Get the data from next day
-  const getDataForNextDay = async() => {
+  const getDataForNextDay = async () => {
     const currentDate = dayjs(results.date);
     const nextDate = currentDate.add(1, 'day');
-    const nextDateString = nextDate.format('YYYY-MM-DD');   
-    const response = await fetch(`${process.env.API_URL}?date=${nextDateString}`);
+    const nextDateString = nextDate.format('YYYY-MM-DD');
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?date=${nextDateString}`);
     const json = await response.json();
-    
-    setResults(json.data);
 
-    resetForm.reset();
-  }
+    setResults(json.data);
+    }
 
   // Get the data from previous day
-  const getDataForPreviousDay = async() => {
+  const getDataForPreviousDay = async () => {
     const currentDate = dayjs(results.date);
     const previousDate = currentDate.subtract(1, 'day');
     const previousDateString = previousDate.format('YYYY-MM-DD');
-    const response = await fetch(`${process.env.API_URL}?date=${previousDateString}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?date=${previousDateString}`);
     const json = await response.json();
-    
+
     setResults(json.data);
-    
-    resetForm.reset();
+
+
   }
 
   // Post the data to the API
-  const postData = async() => {
-    await fetch(process.env.API_URL , {
+  const postData = async () => {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
       method: 'POST',
       body: JSON.stringify(results),
     });
-    
-    resetForm.reset();
+
+
   }
 
   return (
@@ -74,7 +68,7 @@ export const Home = ({data}) => {
 
       <div className="w-full h-auto md:h-16 lg:h-16 bg-violet-500 flex items-center place-content-center">
         <h1 className='text-white text-2xl md:text-4xl mr-5 lg:text-4xl font-bold'>Macro Compliance Tracker </h1>
-        <a href="" className='absolute right-0 top-0 xxsm:relative'><Github /></a>
+        <a href="https://github.com/Mahmadabid/macro-compilance-tracker-mongoose-nextjs" className='absolute right-0 top-0 xxsm:relative'><Github /></a>
       </div>
       <div className="flex text-center">
         <div className="w-1/3 bg-gray-200 p-4"><button onClick={getDataForPreviousDay}>Previous Day</button></div>
@@ -94,7 +88,7 @@ export const Home = ({data}) => {
       <div className="flex text-center">
         <div className="w-full">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full mb-6 text-xl" onClick={postData}>
-              Save
+            Save
           </button>
         </div>
       </div>
@@ -104,9 +98,9 @@ export const Home = ({data}) => {
 
 // Get the data from the API and pass it to the Home component
 Home.getInitialProps = async () => {
-  const response = await fetch(`${process.env.API_URL}?date=${dayjs().format('YYYY-MM-DD')}`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}?date=${dayjs().format('YYYY-MM-DD')}`);
   const json = await response.json();
-  return {data: json.data};
+  return { data: json.data };
 }
 
 export default Home;
