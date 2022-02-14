@@ -36,7 +36,9 @@ export const Home = ({data}) => {
     const nextDateString = nextDate.format('YYYY-MM-DD');   
     const response = await fetch(`${process.env.API_URL}?date=${nextDateString}`);
     const json = await response.json();
+    
     setResults(json.data);
+
     resetForm.reset();
   }
 
@@ -47,7 +49,9 @@ export const Home = ({data}) => {
     const previousDateString = previousDate.format('YYYY-MM-DD');
     const response = await fetch(`${process.env.API_URL}?date=${previousDateString}`);
     const json = await response.json();
+    
     setResults(json.data);
+    
     resetForm.reset();
   }
 
@@ -57,6 +61,7 @@ export const Home = ({data}) => {
       method: 'POST',
       body: JSON.stringify(results),
     });
+    
     resetForm.reset();
   }
 
