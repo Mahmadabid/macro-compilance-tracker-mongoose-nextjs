@@ -10,6 +10,11 @@ export const Home = ({ data }) => {
   // Get results from API
   const [results, setResults] = useState(data);
 
+  // Reset the form
+  const resetButton = () => {
+    (document.getElementById('compliance') as HTMLFormElement).reset();
+  }
+  
   // Get the form data
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const data = { ...results };
@@ -33,6 +38,8 @@ export const Home = ({ data }) => {
     const json = await response.json();
 
     setResults(json.data);
+
+    resetButton();
     }
 
   // Get the data from previous day
@@ -45,7 +52,7 @@ export const Home = ({ data }) => {
 
     setResults(json.data);
 
-
+    resetButton();
   }
 
   // Post the data to the API
@@ -55,7 +62,7 @@ export const Home = ({ data }) => {
       body: JSON.stringify(results),
     });
 
-
+    resetButton();
   }
 
   return (
