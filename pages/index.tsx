@@ -10,7 +10,8 @@ config();
 export const Home = ({data}) => {
 
   // To reset the Form
-  let resetForm = document.getElementById('compliance') as HTMLInputElement;
+  var FormID = 'compliance';
+  let resetForm: HTMLFormElement = document.querySelector(FormID);
 
   // Get results from API
   const [results, setResults] = useState(data);
