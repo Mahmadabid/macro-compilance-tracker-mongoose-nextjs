@@ -4,8 +4,6 @@ import Form from '../components/forms';
 import Result from '../components/result';
 import dayjs from "dayjs";
 import Github from '../components/github';
-import { config } from 'dotenv';
-config();
 
 export const Home = ({data}) => {
 
