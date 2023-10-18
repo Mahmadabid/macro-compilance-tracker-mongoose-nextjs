@@ -14,7 +14,7 @@ const Form: React.FC<FormProps> = ({ heading }) => {
                     <input type="number" placeholder={`Enter ${macro}`} className="bg-gray-100 p-2 border rounded" />
                 </div>
             ))}
-            <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <button className="mt-4 bg-blue-500 text-white px-8 py-2 font-bold rounded hover:bg-blue-600">
                 Save
             </button>
 
