@@ -14,25 +14,27 @@ This is a web application built using several modern technologies to provide an 
 
 1. **Clone the repository:**
    ```ruby
-   git clone https://github.com/Mahmadabid/macro-compilance-tracker-mongoose-nextjs
+      git clone https://github.com/Mahmadabid/macro-compilance-tracker-mongoose-nextjs
    ```
 2. **Navigate to the project directory:**
-  ```ruby
-cd macro-compilance-tracker-mongoose-nextjs
-```
-3. **Install the dependencies:**
+   ```ruby
+      cd macro-compilance-tracker-mongoose-nextjs
+   ```
+4. **Install the dependencies:**
+   
    use npm
    ```ruby
-   npm install
-
+      npm install
+   ```
    Or using yarn:
-```ruby
-   yarn install
-```
-
-4. **Setup environment variables:**
-Create an **.env** file. Fill in the necessary environment variables such as the Auth0 credentials and MongoDB connection string.
-5. **Run the development server:**
    ```ruby
-   npm run dev```
+      yarn install
+   ```
+
+6. **Setup environment variables:**
+Create an **.env** file. Fill in the necessary environment variables such as the Auth0 credentials and MongoDB connection string.
+7. **Run the development server:**
+   ```ruby
+      npm run dev
+   ```
 
