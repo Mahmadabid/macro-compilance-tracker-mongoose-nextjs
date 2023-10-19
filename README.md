@@ -21,7 +21,6 @@ This is a web application built using several modern technologies to provide an 
       cd macro-compilance-tracker-mongoose-nextjs
    ```
 4. **Install the dependencies:**
-   
    use npm
    ```ruby
       npm install
@@ -30,11 +29,9 @@ This is a web application built using several modern technologies to provide an 
    ```ruby
       yarn install
    ```
-
 6. **Setup environment variables:**
 Create an **.env** file. Fill in the necessary environment variables such as the Auth0 credentials and MongoDB connection string.
 7. **Run the development server:**
    ```ruby
       npm run dev
    ```
-
