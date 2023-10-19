@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
     const { user } = useUser();
-    const userInitial = user?.name?.charAt(0).toUpperCase();
+    
 
     return (
         <header className="bg-blue-500 p-4 xsm:px-0 text-white shadow-md relative flex items-center">
@@ -11,7 +11,10 @@ const Header = () => {
 
             {user ? (
                 <Link href="/api/auth/logout">
-                    <button className="ml-auto inline-block h-9 w-9 text-xl rounded-full bg-white font-bold text-green-500">{userInitial}</button>
+                    <img 
+                    src={user.picture || ''}
+                    alt="Image"
+                    className="ml-auto inline-block h-9 w-9 rounded-full"/>
                 </Link>
     ) : (
         <Link href="/api/auth/login">
