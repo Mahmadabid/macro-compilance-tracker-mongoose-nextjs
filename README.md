@@ -24,7 +24,6 @@ cd macro-compilance-tracker-mongoose-nextjs
    use npm
    ```ruby
    npm install
-   ```
 
 Or using yarn:
 ```ruby
