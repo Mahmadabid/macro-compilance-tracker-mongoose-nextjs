@@ -22,7 +22,7 @@ This is a web application built using several modern technologies to provide an 
    ```
 4. **Install the dependencies:**
    
-   use npm
+   use npm:
    ```ruby
       npm install
    ```
