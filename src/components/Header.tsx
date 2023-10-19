@@ -12,7 +12,7 @@ const Header = () => {
 
             {user ? (
                 <Link href="/api/auth/logout">
-                    <Image
+                    <img
                     src={user.picture || ''}
                     alt="Image"
                     className="ml-auto inline-block h-9 w-9 rounded-full"/>
