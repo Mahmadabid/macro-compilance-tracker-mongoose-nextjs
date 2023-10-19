@@ -29,6 +29,7 @@ Or using yarn:
 ```ruby
 yarn install
 ```
+
 4. **Setup environment variables:**
 Create an **.env** file. Fill in the necessary environment variables such as the Auth0 credentials and MongoDB connection string.
 5. **Run the development server:**
