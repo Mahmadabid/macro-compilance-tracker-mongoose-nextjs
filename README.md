@@ -25,7 +25,7 @@ cd macro-compilance-tracker-mongoose-nextjs
    ```ruby
    npm install
 
-Or using yarn:
+   Or using yarn:
 ```ruby
    yarn install
 ```
@@ -34,5 +34,5 @@ Or using yarn:
 Create an **.env** file. Fill in the necessary environment variables such as the Auth0 credentials and MongoDB connection string.
 5. **Run the development server:**
    ```ruby
-   npm run dev
-```
+   npm run dev```
+
