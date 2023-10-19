@@ -8,7 +8,7 @@ This is a web application built using several modern technologies to provide an 
 - **[TailwindCSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapidly building custom designs without writing any custom CSS.
 - **[Auth0](https://auth0.com/)**: A flexible, drop-in solution to add authentication and authorization services to our applications.
 - **[MongoDB](https://www.mongodb.com/)**: A document-based distributed database used to store our application data.
-- - **Mongoose:** A MongoDB object modeling tool designed to work in an asynchronous environment.
+- **Mongoose:** A MongoDB object modeling tool designed to work in an asynchronous environment.
 
 ## 🎉 Getting Started
 
@@ -24,7 +24,8 @@ cd macro-compilance-tracker-mongoose-nextjs
    use npm
    ```ruby
    npm install
-```
+   ```
+
 Or using yarn:
 ```ruby
    yarn install
