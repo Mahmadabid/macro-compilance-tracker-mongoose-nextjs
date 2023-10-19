@@ -1,5 +1,6 @@
 import { useUser } from "@auth0/nextjs-auth0/client";
 import Link from 'next/link';
+import Image from 'next/image'
 
 const Header = () => {
     const { user } = useUser();
@@ -11,7 +12,7 @@ const Header = () => {
 
             {user ? (
                 <Link href="/api/auth/logout">
-                    <img 
+                    <Image
                     src={user.picture || ''}
                     alt="Image"
                     className="ml-auto inline-block h-9 w-9 rounded-full"/>
