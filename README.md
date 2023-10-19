@@ -21,6 +21,7 @@ This is a web application built using several modern technologies to provide an 
       cd macro-compilance-tracker-mongoose-nextjs
    ```
 4. **Install the dependencies:**
+   
    use npm
    ```ruby
       npm install
