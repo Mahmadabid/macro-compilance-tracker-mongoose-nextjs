@@ -27,7 +27,7 @@ cd macro-compilance-tracker-mongoose-nextjs
 ```
 Or using yarn:
 ```ruby
-yarn install
+   yarn install
 ```
 
 4. **Setup environment variables:**
